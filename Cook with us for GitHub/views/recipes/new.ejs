@@ -1,0 +1,80 @@
+<% layout('layouts/base') %>
+
+<div class="row">
+    <h2 class="text-center">Add A Recipe</h2>
+    <div class="col-md-6 offset-md-3">
+  
+    <form action="/recipes/new/" method="POST" novalidate class="validated-form" >
+<div class="mb-3">
+<label class="form-label" for="title">Title</label>
+<input class="form-control" type="text" id="title" name="title" required>
+<div class="valid-feedback">
+    Looks good!
+</div>
+</div> 
+
+<div class="mb-3">
+    <label class="form-label" for="category">Category</label>
+   
+    <select class="form-select" aria-label="Default select example" name="category" required>
+       <% for(let category of categories){ %> <!-- <option selected>Choose category</option> -->
+        <option value="<%=category%>" name="category"><%=category%></option>
+     <% } %> 
+    </select>
+      
+    <div class="valid-feedback">
+        Looks good!
+    </div>
+    </div> 
+
+<div class="input-group mb-3">
+    <label for="group" class="form-label">Ingredients</label>
+
+    <div class="input-group" id="group"> 
+    <input name="ingredients[quantity]"  id="ing" type="number" class="form-control" placeholder="Quantity" aria-label="Quantity" required>
+    <input name="ingredients[unit]" type="text" class="form-control" placeholder="Units" aria-label="Units" required>
+    <input name="ingredients[product]" type="text" class="form-control" placeholder="Product" aria-label="Product" required>
+    </div> 
+
+  <div id="place">
+
+  </div>
+
+<p>
+    <input id="btnAdd" class="addNew btn btn-info " type="button" value="Add Ingredient">
+</p>
+ <style>
+input{
+        margin-top: 10px;
+    }
+</style>
+   
+   <div class="valid-feedback">
+        Looks good!
+    </div>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="description">Description</label>
+<textarea class="form-control" type="text" id="description" name="description" required>
+</textarea>
+<div class="valid-feedback">
+    Looks good!
+</div>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for="image">Image URL</label>
+    <input class="form-control" type="text" id="image" name="image" required>
+ <div class="valid-feedback">
+    Looks good!
+</div>
+</div>
+
+<div class="mb-3"><button class="btn btn-success">Save</button>
+</div>
+
+</form> 
+</div> 
+</div>
+

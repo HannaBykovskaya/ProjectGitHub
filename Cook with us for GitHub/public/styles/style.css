@@ -1,0 +1,27 @@
+.btn-search {
+    transition-duration: 0.4s;
+    background-color: #ffffff00;
+    border: 2px solid #ffffff;
+    }
+  
+.btn-search:hover {
+    background-color: #6cb5e6c5; 
+    color: white;
+    border: 2px solid #ffffff;
+}
+
+.nav-link:hover, .navbar-brand:hover{
+    color: white;
+  }
+
+.dropdown-item:hover{
+     background-color: #5b92b625;
+}
+
+.navbar-toggler:hover{
+    color: white;
+}
+
+.navbar-toggler-icon{
+    color: white;
+}
